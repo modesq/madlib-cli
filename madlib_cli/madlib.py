@@ -12,3 +12,7 @@ def parse_template():
 
 def merge():
     pass
+
+
+if __name__ == "__main__":
+    read_template("assets/make_me_a_video_game_template.txt")
