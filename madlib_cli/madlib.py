@@ -46,20 +46,29 @@ def welcome():
     )
 
 
-def user_interface():
+def user_interface(path):
     """
     used to display the user interface and run the other functions where needed to make the game run as needed.
 
     """
     welcome()
     # template = read_template("assets/make_me_a_video_game_template.txt")
-    template = read_template("assets/dark_and_stormy_night_template.txt")
-    required_words, required_words = parse_template(template)
+    # template = read_template(path)
+    # required_words, required_words = parse_template(template)
+    # filled_template = list()
+    # for word in required_words:
+    #     filled_template.append(input(f"\nplease enter a {word} \n >"))
+    # with open(path, "w") as file:
+    #     temp = merge(required_words, (tuple)(filled_template))
+    #     file.write(temp)
+    #     print(temp)
+    reuseable_text = read_template(path)
+    empty_template, required_words = parse_template(reuseable_text)
     filled_template = list()
     for word in required_words:
         filled_template.append(input(f"\nplease enter a {word} \n >"))
-    with open("make_me_a_video_game_output.txt", "w") as file:
-        temp = merge(required_words, (tuple)(filled_template))
+    with open("assets/output.txt", "w") as file:
+        temp = merge(empty_template, (tuple)(filled_template))
         file.write(temp)
         print(temp)
 
@@ -67,4 +76,4 @@ def user_interface():
 if __name__ == "__main__":
     # read_template("assets/dark_and_stormy_night_template.txt")
     # read_template("assets/make_me_a_video_game_template.txt")
-    user_interface()
+    user_interface("assets/make_me_a_video_game_template.txt")
