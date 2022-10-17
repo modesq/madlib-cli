@@ -19,4 +19,4 @@ TODO
 
     all done
 
-[pull request](https://github.com/modesq/madlib-cli/pull/2)
+[pull request](https://github.com/modesq/madlib-cli/pull/3)
